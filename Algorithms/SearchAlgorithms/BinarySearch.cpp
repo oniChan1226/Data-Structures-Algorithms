@@ -7,11 +7,14 @@ int BinarySearchIterative(int arr[], int, int);
 int main() {
     // Must be sorted for Binary Search
     int arr[] = { 2, 3, 4, 10, 40 };
+    // int arr[] = { -1, 0, 2, 10 };
+    // int arr[] = { -1, 0, 5 };
+    // int arr[] = { 0, 1 };
 
     int length = 0;
     for(int element: arr) length++;
 
-    cout << "BinarySearchRecursive: " << BinarySearchRecursive(arr, 0, length - 1, 10) << endl;
+    // cout << "BinarySearchRecursive: " << BinarySearchRecursive(arr, 0, length - 1, 10) << endl;
     cout << "BinarySearchIterative: " << BinarySearchIterative(arr, 10, length - 1) << endl;
 
     return 0;
@@ -31,7 +34,7 @@ int BinarySearchIterative(int arr[], int key, int length){
     int start = 0, end = length;
     int mid;
 
-    while(start < end) {
+    while(start <= end) {
         mid = (start + end)/2;
 
         if(arr[mid] == key) return mid;
